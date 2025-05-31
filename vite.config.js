@@ -9,4 +9,8 @@ export default defineConfig({
     host: process.env.DEVELOPMENT_VITE_HOST,
     allowedHosts: true,
   },
+  build: {
+    outDir: "../dist",
+    emptyOutDir: true,
+  },
 });
