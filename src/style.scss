@@ -1,3 +1,159 @@
+@mixin theme-variables($theme) {
+  --theme-red: var(--var-color-#{$theme}-red);
+  --theme-orange: var(--var-color-#{$theme}-orange);
+  --theme-yellow: var(--var-color-#{$theme}-yellow);
+  --theme-lime: var(--var-color-#{$theme}-lime);
+  --theme-green: var(--var-color-#{$theme}-green);
+  --theme-aqua: var(--var-color-#{$theme}-aqua);
+  --theme-skye: var(--var-color-#{$theme}-skye);
+  --theme-snow: var(--var-color-#{$theme}-snow);
+  --theme-blue: var(--var-color-#{$theme}-blue);
+  --theme-purple: var(--var-color-#{$theme}-purple);
+  --theme-pink: var(--var-color-#{$theme}-pink);
+  --theme-cherry: var(--var-color-#{$theme}-cherry);
+  --theme-text: var(--var-color-#{$theme}-text);
+  --theme-subtext1: var(--var-color-#{$theme}-subtext1);
+  --theme-subtext0: var(--var-color-#{$theme}-subtext0);
+  --theme-overlay2: var(--var-color-#{$theme}-overlay2);
+  --theme-overlay1: var(--var-color-#{$theme}-overlay1);
+  --theme-overlay0: var(--var-color-#{$theme}-ovarlay0);
+  --theme-surface2: var(--var-color-#{$theme}-surface2);
+  --theme-surface1: var(--var-color-#{$theme}-surface1);
+  --theme-surface0: var(--var-color-#{$theme}-surface0);
+  --theme-base: var(--var-color-#{$theme}-base);
+  --theme-mantle: var(--var-color-#{$theme}-mantle);
+  --theme-crust: var(--var-color-#{$theme}-crust);
+}
+
+:root {
+  --var-color-summer-red: #c0696b;
+  --var-color-summer-orange: #ca8c70;
+  --var-color-summer-yellow: #cbae75;
+  --var-color-summer-lime: #b4c17f;
+  --var-color-summer-green: #a9be88;
+  --var-color-summer-aqua: #91bb9c;
+  --var-color-summer-skye: #8fbab5;
+  --var-color-summer-snow: #8eb4ba;
+  --var-color-summer-blue: #8ca4bb;
+  --var-color-summer-purple: #b19ac6;
+  --var-color-summer-pink: #d0a3c3;
+  --var-color-summer-cherry: #dbb5ca;
+  --var-color-summer-text: #171c1f;
+  --var-color-summer-subtext1: #415055;
+  --var-color-summer-subtext0: #526469;
+  --var-color-summer-overlay2: #63787d;
+  --var-color-summer-overlay1: #758a90;
+  --var-color-summer-ovarlay0: #879da4;
+  --var-color-summer-surface2: #9cb2b8;
+  --var-color-summer-surface1: #b4c6cc;
+  --var-color-summer-surface0: #ced9e0;
+  --var-color-summer-base: #e9ebf0;
+  --var-color-summer-mantle: #e1e5ed;
+  --var-color-summer-crust: #d6dbe9;
+
+  --var-color-spring-red: #f57f82;
+  --var-color-spring-orange: #f7a182;
+  --var-color-spring-yellow: #f5d098;
+  --var-color-spring-lime: #dbe6af;
+  --var-color-spring-green: #cae0a7;
+  --var-color-spring-aqua: #addeb9;
+  --var-color-spring-skye: #ace0d4;
+  --var-color-spring-snow: #afdfe6;
+  --var-color-spring-blue: #b2cfed;
+  --var-color-spring-purple: #d0bbf0;
+  --var-color-spring-pink: #f3c0e5;
+  --var-color-spring-cherry: #f6cee5;
+  --var-color-spring-text: #f8f9e8;
+  --var-color-spring-subtext1: #adc9bc;
+  --var-color-spring-subtext0: #96b4aa;
+  --var-color-spring-overlay2: #839e9a;
+  --var-color-spring-overlay1: #6f8788;
+  --var-color-spring-ovarlay0: #58686d;
+  --var-color-spring-surface2: #4a585c;
+  --var-color-spring-surface1: #3d494d;
+  --var-color-spring-surface0: #313b40;
+  --var-color-spring-base: #2b3538;
+  --var-color-spring-mantle: #1c2225;
+  --var-color-spring-crust: #171c1f;
+
+  --var-color-fall-red: #f57f82;
+  --var-color-fall-orange: #f7a182;
+  --var-color-fall-yellow: #f5d098;
+  --var-color-fall-lime: #dbe6af;
+  --var-color-fall-green: #cae0a7;
+  --var-color-fall-aqua: #addeb9;
+  --var-color-fall-skye: #ace0d4;
+  --var-color-fall-snow: #afdfe6;
+  --var-color-fall-blue: #b2cfed;
+  --var-color-fall-purple: #d0bbf0;
+  --var-color-fall-pink: #f3c0e5;
+  --var-color-fall-cherry: #f6cee5;
+  --var-color-fall-text: #f8f9e8;
+  --var-color-fall-subtext1: #adc9bc;
+  --var-color-fall-subtext0: #96b4aa;
+  --var-color-fall-overlay2: #839e9a;
+  --var-color-fall-overlay1: #6f8788;
+  --var-color-fall-ovarlay0: #58686d;
+  --var-color-fall-surface2: #4a585c;
+  --var-color-fall-surface1: #3d494d;
+  --var-color-fall-surface0: #313b40;
+  --var-color-fall-base: #232a2e;
+  --var-color-fall-mantle: #1c2225;
+  --var-color-fall-crust: #171c1f;
+
+  --var-color-winter-red: #f57f82;
+  --var-color-winter-orange: #f7a182;
+  --var-color-winter-yellow: #f5d098;
+  --var-color-winter-lime: #dbe6af;
+  --var-color-winter-green: #cae0a7;
+  --var-color-winter-aqua: #addeb9;
+  --var-color-winter-skye: #ace0d4;
+  --var-color-winter-snow: #afdfe6;
+  --var-color-winter-blue: #b2cfed;
+  --var-color-winter-purple: #d0bbf0;
+  --var-color-winter-pink: #f3c0e5;
+  --var-color-winter-cherry: #f6cee5;
+  --var-color-winter-text: #f8f9e8;
+  --var-color-winter-subtext1: #adc9bc;
+  --var-color-winter-subtext0: #96b4aa;
+  --var-color-winter-overlay2: #839e9a;
+  --var-color-winter-overlay1: #6f8788;
+  --var-color-winter-ovarlay0: #58686d;
+  --var-color-winter-surface2: #4a585c;
+  --var-color-winter-surface1: #3d494d;
+  --var-color-winter-surface0: #2d393d;
+  --var-color-winter-base: #1d2428;
+  --var-color-winter-mantle: #191e21;
+  --var-color-winter-crust: #171c1f;
+
+  @include theme-variables(summer);
+
+  @media (prefers-color-scheme: dark) {
+    @include theme-variables(spring);
+  }
+}
+
+html.summer {
+  @include theme-variables(summer);
+}
+
+html.spring {
+  @include theme-variables(spring);
+}
+
+html.fall {
+  @include theme-variables(fall);
+}
+
+html.winter {
+  @include theme-variables(winter);
+}
+
+body {
+  background-color: var(--theme-base);
+}
+
 h1 {
   font-size: 4rem;
+  color: var(--theme-text);
 }
