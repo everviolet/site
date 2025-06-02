@@ -1,6 +1,9 @@
 <template>
   <nav class="navbar">
-    <a href="/" class="navbar__name">Everviolet</a>
+    <div class="navbar__head">
+      <img src="/evg-circle-pixel-small.svg" alt="everviolet" width="32" height="32"/>
+      <a href="/" class="navbar__name">everviolet</a>
+    </div>
     <div class="navbar__links">
       <div class="navbar__link"><a href="/palette">Palette</a></div>
       <div class="navbar__link"><a href="/ports">Ports</a></div>
@@ -98,6 +101,13 @@ onBeforeUnmount(() => {
       }
     }
   }
+}
+
+.navbar__head {
+  display: flex;
+  flex-direction: row;
+
+  gap: spacing(16);
 }
 
 .navbar__name {
