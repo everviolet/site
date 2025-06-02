@@ -40,6 +40,7 @@ onBeforeUnmount(() => {
 
 .navbar {
   position: sticky;
+  top: 0;
   width: 100%;
   height: 6rem;
   display: flex;
@@ -47,6 +48,14 @@ onBeforeUnmount(() => {
   justify-content: space-between;
   align-items: center;
   padding: 0 calc((100dvw - 80rem) / 2);
+  background-color: var(--theme-base);
+
+  transition: height 100ms ease;
+
+  .navbar__links {
+    display: flex;
+    flex-direction: row;
+  }
 
   &::after {
     content: "";
@@ -59,8 +68,12 @@ onBeforeUnmount(() => {
     transition: opacity 0.3s ease;
     box-shadow: 0 0 1rem var(--theme-crust);
   }
-  &:hover::after {
-    opacity: 1;
+  &[data-scrolled="true"] {
+    height: 4rem;
+
+    &::after {
+      opacity: 1;
+    }
   }
 }
 
@@ -72,9 +85,20 @@ onBeforeUnmount(() => {
 }
 
 .navbar__link {
-  margin-left: spacing(32);
   font-size: font-size(20);
   font-weight: font-weight(medium);
   color: theme(text);
+
+  & + &:before {
+    content: "·";
+    margin: 0 1.04rem;
+    color: theme(overlay0);
+
+    transition: margin 100ms ease;
+
+    .navbar[data-scrolled="true"] & {
+      margin: 0 2.08rem;
+    }
+  }
 }
 </style>
