@@ -133,18 +133,22 @@
   }
 }
 
-html.summer {
+html[data-theme="summer"] {
+  color-scheme: light;
   @include theme-variables(summer);
 }
 
-html.spring {
+html[data-theme="spring"] {
+  color-scheme: dark;
   @include theme-variables(spring);
 }
 
-html.fall {
+html[data-theme="fall"] {
+  color-scheme: dark;
   @include theme-variables(fall);
 }
 
-html.winter {
+html[data-theme="winter"] {
+  color-scheme: dark;
   @include theme-variables(winter);
 }
