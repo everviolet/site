@@ -26,3 +26,7 @@ p {
 #app {
   height: 100%;
 }
+
+::selection {
+  background-color: theme(surface1);
+}
