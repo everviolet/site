@@ -7,8 +7,14 @@ body {
   font-family: "Nunito", -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Adwaita Sans, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
   background-color: var(--theme-base);
   color: var(--theme-text);
+  min-height: 100vh;
+  width: 100vw;
 }
 
 code {
   font-family: Menlo, Consolas, Monaco, Adwaita Mono, Liberation Mono, Lucida Console, monospace;
+}
+
+#app {
+  height: 100%;
 }
