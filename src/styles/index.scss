@@ -1,0 +1,34 @@
+@use "./functions" as *;
+@use "./reset";
+@use "./font";
+@use "./variables";
+
+body {
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+  background-color: var(--theme-crust);
+}
+
+.navbar {
+  position: absolute;
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 calc((100dvw - 80rem) / 2);
+}
+
+.navbar__name {
+  font-size: font-size(36);
+  font-weight: font-weight(semibold);
+  color: theme(text);
+  text-decoration: none;
+}
+
+.navbar__link {
+  margin-left: spacing(32);
+  font-size: font-size(20);
+  font-weight: font-weight(medium);
+  color: theme(text);
+}
