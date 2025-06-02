@@ -1,79 +1,56 @@
 - name: Winter
   colors:
-    - name: crust
-      hex: 171c1f
-    - name: mantle
-      hex: 191e21
-    - name: base
-      hex: 1d2428
+    - name: red
+      hex: f57f82
+    - name: orange
+      hex: f7a182
+    - name: yellow
+      hex: f5d098
+    - name: lime
+      hex: dbe6af
+    - name: green
+      hex: cae0a7
+    - name: aqua
+      hex: addeb9
+    - name: skye
+      hex: ace0d4
+    - name: snow
+      hex: afdfe6
+    - name: blue
+      hex: b2cfed
+    - name: purple
+      hex: d0bbf0
+    - name: pink
+      hex: f3c0e5
+    - name: cherry
+      hex: f6cee5
+    - name: text
+      hex: f8f9e8
+    - name: subtext1
+      hex: adc9bc
+    - name: subtext0
+      hex: 96b4aa
+    - name: overlay2
+      hex: 839e9a
+    - name: overlay1
+      hex: 6f8788
+    - name: overlay0
+      hex: 58686d
+    - name: surface2
+      hex: 4a585c
+    - name: surface1
+      hex: 3d494d
     - name: surface0
       hex: 2d393d
-    - name: surface1
-      hex: 3d494d
-    - name: surface2
-      hex: 4a585c
-    - name: overlay0
-      hex: 58686d
-    - name: overlay1
-      hex: 6f8788
-    - name: overlay2
-      hex: 839e9a
-    - name: subtext0
-      hex: 96b4aa
-    - name: subtext1
-      hex: adc9bc
-    - name: text
-      hex: f8f9e8
-    - name: red
-      hex: f57f82
-    - name: orange
-      hex: f7a182
-    - name: yellow
-      hex: f5d098
-    - name: lime
-      hex: dbe6af
-    - name: green
-      hex: cae0a7
-    - name: aqua
-      hex: addeb9
-    - name: skye
-      hex: ace0d4
-    - name: snow
-      hex: afdfe6
-    - name: blue
-      hex: b2cfed
-    - name: purple
-      hex: d0bbf0
-    - name: pink
-      hex: f3c0e5
-    - name: cherry
-      hex: f6cee5
+    - name: base
+      hex: 1d2428
+    - name: mantle
+      hex: 191e21
+    - name: crust
+      hex: 171c1f
+    
 - name: Fall
   colors:
-    - name: crust
-      hex: 171c1f
-    - name: mantle
-      hex: 1c2225
-    - name: base
-      hex: 232a2e
-    - name: surface0
-      hex: 313b40
-    - name: surface1
-      hex: 3d494d
-    - name: surface2
-      hex: 4a585c
-    - name: overlay0
-      hex: 58686d
-    - name: overlay1
-      hex: 6f8788
-    - name: overlay2
-      hex: 839e9a
-    - name: subtext0
-      hex: 96b4aa
-    - name: subtext1
-      hex: adc9bc
-    - name: text
-      hex: f8f9e8
     - name: red
       hex: f57f82
     - name: orange
@@ -98,32 +75,33 @@
       hex: f3c0e5
     - name: cherry
       hex: f6cee5
+    - name: text
+      hex: f8f9e8
+    - name: subtext1
+      hex: adc9bc
+    - name: subtext0
+      hex: 96b4aa
+    - name: overlay2
+      hex: 839e9a
+    - name: overlay1
+      hex: 6f8788
+    - name: overlay0
+      hex: 58686d
+    - name: surface2
+      hex: 4a585c
+    - name: surface1
+      hex: 3d494d
+    - name: surface0
+      hex: 313b40
+    - name: base
+      hex: 232a2e
+    - name: mantle
+      hex: 1c2225
+    - name: crust
+      hex: 171c1f
+    
 - name: Spring
   colors:
-    - name: crust
-      hex: 1c2225
-    - name: mantle
-      hex: 232a2e
-    - name: base
-      hex: 2b3538
-    - name: surface0
-      hex: 313b40
-    - name: surface1
-      hex: 3d494d
-    - name: surface2
-      hex: 4a585c
-    - name: overlay0
-      hex: 58686d
-    - name: overlay1
-      hex: 6f8788
-    - name: overlay2
-      hex: 839e9a
-    - name: subtext0
-      hex: 96b4aa
-    - name: subtext1
-      hex: adc9bc
-    - name: text
-      hex: f8f9e8
     - name: red
       hex: f57f82
     - name: orange
@@ -148,32 +126,33 @@
       hex: f3c0e5
     - name: cherry
       hex: f6cee5
+    - name: text
+      hex: f8f9e8
+    - name: subtext1
+      hex: adc9bc
+    - name: subtext0
+      hex: 96b4aa
+    - name: overlay2
+      hex: 839e9a
+    - name: overlay1
+      hex: 6f8788
+    - name: overlay0
+      hex: 58686d
+    - name: surface2
+      hex: 4a585c
+    - name: surface1
+      hex: 3d494d
+    - name: surface0
+      hex: 313b40
+    - name: base
+      hex: 2b3538
+    - name: mantle
+      hex: 232a2e
+    - name: crust
+      hex: 1c2225
+    
 - name: Summer
   colors:
-    - name: crust
-      hex: d6dbe9
-    - name: mantle
-      hex: e1e5ed
-    - name: base
-      hex: e9ebf0
-    - name: surface0
-      hex: ced9e0
-    - name: surface1
-      hex: b4c6cc
-    - name: surface2
-      hex: 9cb2b8
-    - name: overlay0
-      hex: 879da4
-    - name: overlay1
-      hex: 758a90
-    - name: overlay2
-      hex: 63787d
-    - name: subtext0
-      hex: 526469
-    - name: subtext1
-      hex: 415055
-    - name: text
-      hex: 171c1f
     - name: red
       hex: c0696b
     - name: orange
@@ -198,3 +177,29 @@
       hex: d0a3c3
     - name: cherry
       hex: dbb5ca
+    - name: text
+      hex: 171c1f
+    - name: subtext1
+      hex: 415055
+    - name: subtext0
+      hex: 526469
+    - name: overlay2
+      hex: 63787d
+    - name: overlay1
+      hex: 758a90
+    - name: overlay0
+      hex: 879da4
+    - name: surface2
+      hex: 9cb2b8
+    - name: surface1
+      hex: b4c6cc
+    - name: surface0
+      hex: ced9e0
+    - name: base
+      hex: e9ebf0
+    - name: mantle
+      hex: e1e5ed
+    - name: crust
+      hex: d6dbe9
+    
+
