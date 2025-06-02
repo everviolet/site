@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import "dotenv/config";
 import vue from "@vitejs/plugin-vue";
+import content from '@originjs/vite-plugin-content'
 import { fileURLToPath } from "url";
 
 export default defineConfig({
@@ -20,5 +21,8 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    content(),
+  ],
 });
