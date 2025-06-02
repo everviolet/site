@@ -10,6 +10,31 @@
   </nav>
 </template>
 
+<script setup lang="ts">
+import { onMounted, onBeforeUnmount } from "vue";
+
+let navObserver
+
+onMounted(() => {
+  const navbar = document.querySelector(".navbar");
+  const scrollwatcher = document.createElement("div");
+  scrollwatcher.setAttribute("data-scrollwatcher", "");
+  navbar.before(scrollwatcher);
+
+  navObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      navbar.setAttribute("data-scrolled", !entry.isIntersecting);
+    });
+  });
+
+  navObserver.observe(scrollwatcher);
+});
+onBeforeUnmount(() => {
+  navObserver.disconnect()
+  document.querySelector("[data-scrollwatcher]").remove();
+})
+</script>
+
 <style lang="scss">
 @use "@/styles/functions" as *;
 
