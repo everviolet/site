@@ -1,6 +1,5 @@
 <template>
-  <navbar>
-  </navbar>
+  <navbar/>
   <main>
     <div id="hero">
       <div class="container">
@@ -15,16 +14,25 @@
         <div class="hero-image"></div>
       </div>
     </div>
+    <div id="page">
+      <palette/>
+    </div>
   </main>
 </template>
 
 <script setup lang="ts">
 import navbar from "./components/navbar.vue";
+import palette from "./components/palette.vue";
 </script>
 
 <style>
 main {
   height: 100%;
+
+  #page {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 #hero {
