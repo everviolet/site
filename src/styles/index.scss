@@ -5,7 +5,8 @@
 
 body {
   font-family: "Nunito", -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Adwaita Sans, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
-  background-color: var(--theme-crust);
+  background-color: var(--theme-base);
+  color: var(--theme-text);
 }
 
 code {
