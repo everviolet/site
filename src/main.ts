@@ -1,1 +1,4 @@
-console.log("Hello World");
+import { createApp } from "vue";
+import App from "@/main.vue";
+
+createApp(App).mount("#app");
