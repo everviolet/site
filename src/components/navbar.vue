@@ -52,6 +52,8 @@ onBeforeUnmount(() => {
   padding: 0 spacing(76);
   background-color: var(--theme-base);
 
+  transition: height 100ms ease;
+
   @include onmobile() {
     position: unset;
     flex-direction: column;
@@ -67,8 +69,6 @@ onBeforeUnmount(() => {
       width: 100%;
     }
   }
-
-  transition: height 100ms ease;
 
   .navbar__links {
     display: flex;

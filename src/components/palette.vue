@@ -44,9 +44,11 @@ h3 {
     @include notdesktop() {
       height: 60px;
     }
-    height: 40px;
-    border-radius: 16px;
-    outline: 1px solid var(--theme-surface0);
+    & {
+      height: 40px;
+      border-radius: 16px;
+      outline: 1px solid var(--theme-surface0);
+    }
   }
   .name {
     margin: spacing(8) 0;

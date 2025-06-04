@@ -39,10 +39,12 @@ import palette from "@/components/palette.vue";
   >.container {
     display: flex;
     flex-direction: row;
+
+    width: 80%;
+
     @include onmobile() {
       flex-direction: column;
     }
-    width: 80%;
 
     >div{
       @include notmobile() {
