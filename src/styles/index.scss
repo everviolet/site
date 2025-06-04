@@ -67,6 +67,14 @@ p {
   height: 100%;
 }
 
+main {
+  height: 100%;
+
+  #page {
+    margin: 6rem 20% 2rem;
+  }
+}
+
 ::selection {
   background-color: theme(surface1);
 }

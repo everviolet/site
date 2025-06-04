@@ -24,14 +24,6 @@ import palette from "@/components/palette.vue";
 </script>
 
 <style scoped>
-main {
-  height: 100%;
-
-  #page {
-    width: 80%;
-    margin: 0 auto;
-  }
-}
 
 #hero {
   display: flex;
