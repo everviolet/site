@@ -61,7 +61,7 @@ import palette from "@/components/palette.vue";
 
 p.title {
   font-size: 2.5rem;
-  font-weight: 600;
+  font-weight: font-weight(semibold);
 }
 p.subtitle {
   font-size: 1.4rem;

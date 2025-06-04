@@ -120,7 +120,7 @@ onBeforeUnmount(() => {
 
   a {
     font-size: font-size(20);
-    font-weight: font-weight(medium);
+    font-weight: font-weight(semibold);
     color: theme(text);
     background-color: transparent;
 
