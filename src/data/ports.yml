@@ -1,0 +1,45 @@
+- name: neovim
+  repo: nvim
+  desc: "Neovim is a Vim-based text editor built on Lua and libuv"
+- name: lazygit
+  repo: lazygit
+  desc: "Simple terminal UI for git commands"
+- name: alacritty
+  repo: alacritty
+  desc: "The cross-platform, GPU accelerated terminal emulator"
+- name: base16
+  repo: base16
+  desc: "Simple ansi colorscheme"
+- name: discord
+  repo: discord
+  desc: "Discord"
+- name: dunst
+  repo: dunst
+  desc: "Lightweight notification daemon"
+- name: ghostty
+  repo: ghostty
+  desc: "Terminal emulator written in zig"
+- name: godot
+  repo: godot
+  desc: "Free and open source, multi-platform game engine"
+- name: iterm
+  repo: iterm
+  desc: "Terminal emulator for macOS"
+- name: kitty
+  repo: kitty
+  desc: "Fast and feature-rich terminal emulator"
+- name: SCSS
+  repo: scss
+  desc: "scss"
+- name: spicetify
+  repo: spicetify
+  desc: "Spotify client theming"
+- name: tmux
+  repo: tmux
+  desc: "Terminal multiplexer"
+- name: windows terminal
+  repo: windows-terminal
+  desc: "Terminal emulator for Windows"
+- name: yazi
+  repo: yazi
+  desc: "Terminal file manager"
