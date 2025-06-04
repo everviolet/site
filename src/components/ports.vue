@@ -30,6 +30,7 @@ const results = computed(() =>
 
 <style scoped lang="scss">
 @use "@/styles/functions" as *;
+@use "@/styles/responsive" as *;
 
 .header {
   display: flex;
@@ -37,10 +38,28 @@ const results = computed(() =>
   justify-content: space-between;
   align-items: center;
 
-  margin: .5rem 0 1rem;
+  margin: spacing(8) 0 spacing(16);
+
+  .search-wrapper {
+    display: grid;
+  }
 
   input {
     width: 20rem;
+  }
+
+  @include onmobile() {
+    flex-direction: column-reverse;
+    align-items: start;
+    gap: spacing(16);
+
+    .search-wrapper {
+      width: 100%;
+    }
+    input {
+      justify-self: center;
+      width: min(100%, 32rem);
+    }
   }
 }
 

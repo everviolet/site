@@ -28,6 +28,8 @@
   @return var(--var-color-#{$theme}-#{$red});
 }
 
+$spacing-unit: 1rem/16;
+
 @function spacing($size) {
-  @return 0.065rem * $size;
+  @return $spacing-unit * $size;
 }

@@ -38,6 +38,7 @@ onBeforeUnmount(() => {
 
 <style lang="scss">
 @use "@/styles/functions" as *;
+@use "@/styles/responsive" as *;
 
 .navbar {
   position: sticky;
@@ -48,33 +49,53 @@ onBeforeUnmount(() => {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 calc((100dvw - 80rem) / 2);
+  padding: 0 spacing(76);
   background-color: var(--theme-base);
+
+  @include onmobile() {
+    position: unset;
+    flex-direction: column;
+    align-items: start;
+
+    height: 8rem;
+    padding: spacing(8) spacing(32);
+
+    .navbar__links {
+      align-self: center;
+      overflow-x: scroll;
+
+      width: 100%;
+    }
+  }
 
   transition: height 100ms ease;
 
   .navbar__links {
     display: flex;
     flex-direction: row;
+
+    height: 100%;
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    box-shadow: 0 0 1rem var(--theme-crust);
-  }
-  &[data-scrolled="true"] {
-    height: 4rem;
-
+  @include notmobile() {
     &::after {
-      opacity: 1;
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      box-shadow: 0 0 1rem var(--theme-crust);
+    }
+    &[data-scrolled="true"] {
+      height: 4rem;
+
+      &::after {
+        opacity: 1;
+      }
     }
   }
 }
@@ -118,8 +139,10 @@ onBeforeUnmount(() => {
 
     transition: margin 100ms ease;
 
-    .navbar[data-scrolled="true"] & {
-      margin: 0 2.08rem;
+    @include notmobile() {
+      .navbar[data-scrolled="true"] & {
+        margin: 0 2.08rem;
+      }
     }
   }
 }

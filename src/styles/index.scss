@@ -1,4 +1,5 @@
 @use "./functions" as *;
+@use "./responsive" as *;
 @use "./reset";
 @use "./font";
 @use "./variables";
@@ -89,6 +90,13 @@ main {
 
   #page {
     margin: 6rem 20% 2rem;
+
+    @include ontablet() {
+      margin: 6rem 10% 2rem;
+    }
+    @include onmobile() {
+      margin: 6rem 5% 2rem;
+    }
   }
 }
 

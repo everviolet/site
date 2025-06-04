@@ -19,9 +19,12 @@
 import palette from '@/data/palette.yml'
 </script>
 
-<style>
+<style lang="scss">
+@use "@/styles/functions" as *;
+@use "@/styles/responsive" as *;
+
 h3 {
-  margin: 1rem 0;
+  margin: spacing(16) 0;
 
   text-transform: capitalize;
   color: var(--theme-subtext0);
@@ -30,16 +33,23 @@ h3 {
 .palette-colors {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 10px;
+  gap: spacing(8);
+
+  @include notdesktop() {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 .swatch {
   .colorbox {
+    @include notdesktop() {
+      height: 60px;
+    }
     height: 40px;
     border-radius: 16px;
     outline: 1px solid var(--theme-surface0);
   }
   .name {
-    margin: .5rem 0;
+    margin: spacing(8) 0;
     color: var(--theme-subtext0);
   }
 }

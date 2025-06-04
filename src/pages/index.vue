@@ -29,6 +29,7 @@ import palette from "@/components/palette.vue";
 
 <style scoped lang="scss">
 @use "@/styles/functions" as *;
+@use "@/styles/responsive" as *;
 
 #hero {
   display: flex;
@@ -38,10 +39,15 @@ import palette from "@/components/palette.vue";
   >.container {
     display: flex;
     flex-direction: row;
+    @include onmobile() {
+      flex-direction: column;
+    }
     width: 80%;
 
     >div{
-      width: 50%;
+      @include notmobile() {
+        width: 50%;
+      }
     }
     div.description {
       display: flex;
