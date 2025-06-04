@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import palette from '@/palette.yml'
+import palette from '@/data/palette.yml'
 </script>
 
 <style>

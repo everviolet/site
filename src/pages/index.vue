@@ -1,5 +1,4 @@
 <template>
-  <navbar/>
   <main>
     <div id="hero">
       <div class="container">
@@ -21,11 +20,10 @@
 </template>
 
 <script setup lang="ts">
-import navbar from "./components/navbar.vue";
-import palette from "./components/palette.vue";
+import palette from "@/components/palette.vue";
 </script>
 
-<style>
+<style scoped>
 main {
   height: 100%;
 
