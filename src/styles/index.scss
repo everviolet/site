@@ -26,6 +26,13 @@ body {
   font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 }
 
+a {
+  text-decoration: none;
+  color: theme(overlay1);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 .button {
   display: inline-block;
 
@@ -61,6 +68,16 @@ body {
 
 p {
   line-height: 1.5;
+
+  a {
+    padding: 0 spacing(8);
+    background-color: theme(surface0);
+    transition: background-color 200s ease-in-out;
+
+    &:hover {
+      background-color: theme(surface1);
+    }
+  }
 }
 
 #app {

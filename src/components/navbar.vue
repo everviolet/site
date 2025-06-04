@@ -2,10 +2,11 @@
   <nav class="navbar">
     <a href="/" class="navbar__name">Everviolet</a>
     <div class="navbar__links">
-      <a class="navbar__link" href="/palette">Palette</a>
-      <a class="navbar__link">Ports</a>
-      <a class="navbar__link">Community</a>
-      <a class="navbar__link">GitHub</a>
+      <div class="navbar__link"><a href="/palette">Palette</a></div>
+      <div class="navbar__link"><a href="/ports">Ports</a></div>
+      <div class="navbar__link"><a>Resources</a></div>
+      <div class="navbar__link"><a>Community</a></div>
+      <div class="navbar__link"><a href="https://github.com/everviolet">GitHub</a></div>
     </div>
   </nav>
 </template>
@@ -83,17 +84,37 @@ onBeforeUnmount(() => {
   font-weight: font-weight(semibold);
   color: theme(text);
   text-decoration: none;
+
+  &, &:hover {
+    background-color: unset;
+  }
 }
 
 .navbar__link {
-  font-size: font-size(20);
-  font-weight: font-weight(medium);
-  color: theme(text);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  line-height: 2.2rem;
+
+  a {
+    font-size: font-size(20);
+    font-weight: font-weight(medium);
+    color: theme(text);
+    background-color: transparent;
+
+    padding: 0 spacing(12);
+
+    &:hover {
+      background-color: theme(surface0);
+    }
+  }
 
   & + &:before {
     content: "·";
     margin: 0 1.04rem;
     color: theme(overlay0);
+    font-size: font-size(36);
 
     transition: margin 100ms ease;
 
