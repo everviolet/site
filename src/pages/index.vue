@@ -9,6 +9,10 @@
           vibes across different apps, editors, and tools. We’re here to make sure
           you get a beautiful, consistent experience everywhere. ✨
           </p>
+          <div class="actions">
+            <a class="button action-palette" href="/palette">Palette</a>
+            <a class="button accent action-ports" href="/ports">Ports</a>
+          </div>
         </div>
         <div class="hero-image"></div>
       </div>
@@ -23,7 +27,8 @@
 import palette from "@/components/palette.vue";
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@use "@/styles/functions" as *;
 
 #hero {
   display: flex;
@@ -52,7 +57,19 @@ p.title {
 }
 p.subtitle {
   font-size: 1.4rem;
-  margin-top: 0.5rem;
+  margin: spacing(32) 0;
   color: var(--theme-subtext0);
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+
+  .button {
+    &.action-palette {
+    }
+    &.action-ports {
+    }
+  }
 }
 </style>
