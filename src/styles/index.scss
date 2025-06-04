@@ -26,6 +26,39 @@ body {
   font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 }
 
+.button {
+  display: inline-block;
+
+  color: theme(subtext0);
+  background-color: theme(surface0);
+  transition: background-color 200ms ease-in-out;
+
+  margin: 0 spacing(4);
+  border-radius: 99em;
+  padding: 0 spacing(32);
+  width: fit-content;
+  height: 3rem;
+  line-height: calc(3rem - spacing(32) / 2 / 2);
+  font-size: font-size(20);
+
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: theme(subtext1);
+    background-color: theme(surface1);
+  }
+
+  &.accent {
+    color: theme(crust);
+    background-color: theme(skye);
+
+    &:hover {
+      background-color: color-mix(in oklch, theme(skye), theme(base) 10%);
+    }
+  }
+}
+
 p {
   line-height: 1.5;
 }
