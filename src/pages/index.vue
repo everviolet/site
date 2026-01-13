@@ -5,7 +5,7 @@
         <div class="description">
           <p class="title">a gentle, garden-grown color palette</p>
           <p class="subtitle">
-          Everviolet is all about keeping Evergarden alive and spreading its cozy
+          The evergarden org is all about keeping Evergarden alive and spreading its cozy
           vibes across different apps, editors, and tools. We’re here to make sure
           you get a beautiful, consistent experience everywhere. ✨
           </p>

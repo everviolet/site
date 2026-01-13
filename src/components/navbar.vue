@@ -1,15 +1,15 @@
 <template>
   <nav class="navbar">
     <div class="navbar__head">
-      <img src="/evg-circle-pixel-small.svg" alt="everviolet" width="32" height="32"/>
-      <a href="/" class="navbar__name">everviolet</a>
+      <img src="/evg-circle-pixel-small.svg" alt="evergarden" width="32" height="32"/>
+      <a href="/" class="navbar__name">evergarden</a>
     </div>
     <div class="navbar__links">
       <div class="navbar__link"><a href="/palette">Palette</a></div>
       <div class="navbar__link"><a href="/ports">Ports</a></div>
       <div class="navbar__link"><a>Resources</a></div>
       <div class="navbar__link"><a>Community</a></div>
-      <div class="navbar__link"><a href="https://github.com/everviolet">GitHub</a></div>
+      <div class="navbar__link"><a href="https://codeberg.org/evergarden">Codeberg</a></div>
     </div>
   </nav>
 </template>

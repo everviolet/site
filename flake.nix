@@ -1,5 +1,5 @@
 {
-  description = "everviolet site";
+  description = "evergarden site";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";

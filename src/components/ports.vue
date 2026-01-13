@@ -7,7 +7,7 @@
   </div>
   <ul id="ports">
     <li v-for="port in results" class="port">
-      <a :href="`https://github.com/everviolet/${port.repo}`">
+      <a :href="`https://codeberg.org/evergarden/${port.repo}`">
         <h3>{{port.name}}</h3>
         <em>{{port.desc}}</em>
       </a>

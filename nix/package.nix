@@ -8,7 +8,7 @@
   pnpm_10,
 }:
 stdenvNoCC.mkDerivation (oa: {
-  pname = "everviolet-site";
+  pname = "evergarden-site";
   inherit version;
 
   src = ./.;
@@ -30,8 +30,8 @@ stdenvNoCC.mkDerivation (oa: {
   ];
 
   meta = {
-    homepage = "https://github.com/everviolet/site";
-    description = "everviolet site";
+    homepage = "https://codeberg.org/evergarden/site";
+    description = "evergarden site";
     license = lib.licenses.gpl3;
     maintainers = with lib.maintainers; [ comfysage ];
   };

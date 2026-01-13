@@ -1,11 +1,11 @@
 {
-  "name": "everviolet-site",
+  "name": "evergarden-site",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite-ssg build",
+    "build": "vite-ssg build && ./fixdist.sh",
     "preview": "vite preview",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
