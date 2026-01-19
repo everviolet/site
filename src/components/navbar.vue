@@ -1,9 +1,9 @@
 <template>
   <nav class="navbar">
-    <div class="navbar__head">
+    <a class="navbar__head" href="/">
       <img src="/evg-circle-pixel-small.svg" alt="evergarden" width="32" height="32"/>
-      <a href="/" class="navbar__name">evergarden</a>
-    </div>
+      <p class="navbar__name">evergarden</p>
+    </a>
     <div class="navbar__links">
       <div class="navbar__link"><a href="/palette">Palette</a></div>
       <div class="navbar__link"><a href="/ports">Ports</a></div>
@@ -117,14 +117,10 @@ onBeforeUnmount(() => {
 }
 
 .navbar__name {
-  font-size: font-size(36);
+  line-height: 1;
+  font-size: font-size(28);
   font-weight: font-weight(semibold);
   color: theme(text);
-  text-decoration: none;
-
-  &, &:hover {
-    background-color: unset;
-  }
 }
 
 .navbar__link {
