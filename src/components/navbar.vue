@@ -7,9 +7,15 @@
     <div class="navbar__links">
       <div class="navbar__link"><a href="/palette">Palette</a></div>
       <div class="navbar__link"><a href="/ports">Ports</a></div>
-      <div class="navbar__link"><a>Resources</a></div>
-      <div class="navbar__link"><a>Community</a></div>
-      <div class="navbar__link"><a href="https://codeberg.org/evergarden">Codeberg</a></div>
+      <div class="navbar__link">
+        <a href="https://codeberg.org/evergarden/.profile">Resources</a>
+      </div>
+      <div class="navbar__link">
+        <a href="https://robinwobin.dev/redirect/discord">Community</a>
+      </div>
+      <div class="navbar__link">
+        <a href="https://codeberg.org/evergarden">Codeberg</a>
+      </div>
     </div>
   </nav>
 </template>
