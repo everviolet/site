@@ -2,30 +2,43 @@
   <div class="header">
     <h2>Ports</h2>
     <div class="search-wrapper">
-      <input class="form-control search" type="text" v-model="searchQuery" placeholder="search" />
+      <input
+        class="form-control search"
+        type="text"
+        v-model="searchQuery"
+        placeholder="search"
+      />
     </div>
   </div>
   <ul id="ports">
     <li v-for="port in results" class="port">
       <a :href="`https://codeberg.org/evergarden/${port.repo}`">
-        <h3>{{port.name}}</h3>
-        <em>{{port.desc}}</em>
+        <h3>{{ port.name || port.repo }}</h3>
+        <em>{{ port.desc }}</em>
       </a>
     </li>
   </ul>
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed } from "vue";
 
-import ports from '@/data/ports.yml'
+import ports from "@/data/ports.yml";
 
-const searchQuery = ref('')
+const searchQuery = ref("");
 
 const results = computed(() =>
-  ports.filter(item =>
-    searchQuery.value.toLowerCase().split(' ').every(
-      v => item.name.toLowerCase().includes(v))))
+  ports.filter((item) =>
+    searchQuery.value
+      .toLowerCase()
+      .split(" ")
+      .every(
+        (v) =>
+          item.repo.toLowerCase().includes(v) ||
+          (item.name && item.name.toLowerCase().includes(v)),
+      ),
+  ),
+);
 </script>
 
 <style scoped lang="scss">

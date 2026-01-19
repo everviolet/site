@@ -5,7 +5,7 @@
       <h3>{{variant.name}}</h3>
       <div class="palette-colors">
         <div v-for="color in variant.colors" class="swatch">
-          <div class="colorbox" :style="{ 'background-color': '#' + color.hex }"></div>
+          <div class="colorbox" :style="{ 'background-color': color.hex }"></div>
           <div class="name">
             {{color.name}}
           </div>

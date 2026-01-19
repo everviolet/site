@@ -1,45 +1,52 @@
-- name: neovim
-  repo: nvim
+- repo: nvim
+  name: neovim
   desc: "Neovim is a Vim-based text editor built on Lua and libuv"
-- name: lazygit
-  repo: lazygit
-  desc: "Simple terminal UI for git commands"
-- name: alacritty
-  repo: alacritty
+- repo: alacritty
   desc: "The cross-platform, GPU accelerated terminal emulator"
-- name: base16
-  repo: base16
+- repo: aliucord
+  desc: "A mod for the Discord Android App"
+- repo: base16
   desc: "Simple ansi colorscheme"
-- name: discord
-  repo: discord
-  desc: "Discord"
-- name: dunst
-  repo: dunst
+- repo: bat
+  desc: "A cat(1) clone with wings"
+- repo: chrome
+  desc: "Official web browser from Google"
+- repo: discord
+  desc: "VoIP internet messenger"
+- repo: dunst
   desc: "Lightweight notification daemon"
-- name: ghostty
-  repo: ghostty
+- repo: FZF
+  desc: "General-purpose command-line fuzzy finder"
+- repo: ghostty
   desc: "Terminal emulator written in zig"
-- name: godot
-  repo: godot
-  desc: "Free and open source, multi-platform game engine"
-- name: iterm
-  repo: iterm
+- repo: helix
+  desc: "A Kakoune / Neovim inspired editor"
+- repo: iterm
   desc: "Terminal emulator for macOS"
-- name: kitty
-  repo: kitty
+- repo: jellyfin
+  desc: "Free software media system"
+- repo: jellyfin-tui
+  name: jellyfin TUI
+  desc: "Modern music streaming client for the terminal"
+- repo: kitty
   desc: "Fast and feature-rich terminal emulator"
-- name: SCSS
-  repo: scss
-  desc: "scss"
-- name: spicetify
-  repo: spicetify
+- repo: lazygit
+  desc: "Simple terminal UI for git commands"
+- repo: nix
+  desc: "Collection of Nix modules"
+- repo: SCSS
+  desc: "Syntactically awesome style sheets"
+- repo: sublime-text
+  name: sublime text
+  desc: "Sophisticated text editor for code, markup and prose"
+- repo: spicetify
   desc: "Spotify client theming"
-- name: tmux
-  repo: tmux
+- repo: tmux
   desc: "Terminal multiplexer"
-- name: windows terminal
-  repo: windows-terminal
+- repo: windows-terminal
+  name: windows terminal
   desc: "Terminal emulator for Windows"
-- name: yazi
-  repo: yazi
+- repo: yazi
   desc: "Terminal file manager"
+- repo: zathura
+  desc: "Functional document viewer"
