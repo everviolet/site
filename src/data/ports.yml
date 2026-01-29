@@ -3,6 +3,8 @@
   desc: "Neovim is a Vim-based text editor built on Lua and libuv"
 - repo: adwaita
   desc: "Uniform theme for GTK"
+- repo: aerc
+  desc: "A pretty good email client"
 - repo: alacritty
   desc: "The cross-platform, GPU accelerated terminal emulator"
 - repo: aliucord
@@ -40,8 +42,6 @@
   desc: "Collection of Nix modules"
 - repo: qutebrowser
   desc: "Keyboard-focused browser with a minimal GUI"
-- repo: tty
-  desc: "Linux TTY terminal"
 - repo: SCSS
   desc: "Syntactically awesome style sheets"
 - repo: sublime-text
@@ -51,6 +51,10 @@
   desc: "Spotify client theming"
 - repo: tmux
   desc: "Terminal multiplexer"
+- repo: tty
+  desc: "Linux TTY terminal"
+- repo: userstyles
+  desc: "Styles for various websites"
 - repo: windows-terminal
   name: windows terminal
   desc: "Terminal emulator for Windows"
@@ -58,3 +62,5 @@
   desc: "Terminal file manager"
 - repo: zathura
   desc: "Functional document viewer"
+- repo: zed
+  desc: "Minimal code editor crafted for speed and collaboration"
