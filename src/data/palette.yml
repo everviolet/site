@@ -3,7 +3,7 @@
     - name: red
       hex: '#f57f82'
     - name: orange
-      hex: '#f5d098'
+      hex: '#f7a182'
     - name: yellow
       hex: '#f5d098'
     - name: lime
@@ -54,7 +54,7 @@
     - name: red
       hex: '#f57f82'
     - name: orange
-      hex: '#f5d098'
+      hex: '#f7a182'
     - name: yellow
       hex: '#f5d098'
     - name: lime
@@ -105,7 +105,7 @@
     - name: red
       hex: '#f57f82'
     - name: orange
-      hex: '#f5d098'
+      hex: '#f7a182'
     - name: yellow
       hex: '#f5d098'
     - name: lime
