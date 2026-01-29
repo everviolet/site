@@ -23,7 +23,7 @@
     - name: pink
       hex: '#f3c0e5'
     - name: cherry
-      hex: '#f6cee5'
+      hex: '#fae6ef'
     - name: text
       hex: '#f8f9e8'
     - name: subtext1
@@ -74,7 +74,7 @@
     - name: pink
       hex: '#f3c0e5'
     - name: cherry
-      hex: '#f6cee5'
+      hex: '#fae6ef'
     - name: text
       hex: '#f8f9e8'
     - name: subtext1
@@ -125,7 +125,7 @@
     - name: pink
       hex: '#f3c0e5'
     - name: cherry
-      hex: '#f6cee5'
+      hex: '#fae6ef'
     - name: text
       hex: '#f8f9e8'
     - name: subtext1

@@ -1,6 +1,8 @@
 - repo: nvim
   name: neovim
   desc: "Neovim is a Vim-based text editor built on Lua and libuv"
+- repo: adwaita
+  desc: "Uniform theme for GTK"
 - repo: alacritty
   desc: "The cross-platform, GPU accelerated terminal emulator"
 - repo: aliucord
@@ -15,6 +17,8 @@
   desc: "VoIP internet messenger"
 - repo: dunst
   desc: "Lightweight notification daemon"
+- repo: foot
+  desc: "Minimalistic Wayland terminal emulator"
 - repo: FZF
   desc: "General-purpose command-line fuzzy finder"
 - repo: ghostty
@@ -34,6 +38,10 @@
   desc: "Simple terminal UI for git commands"
 - repo: nix
   desc: "Collection of Nix modules"
+- repo: qutebrowser
+  desc: "Keyboard-focused browser with a minimal GUI"
+- repo: tty
+  desc: "Linux TTY terminal"
 - repo: SCSS
   desc: "Syntactically awesome style sheets"
 - repo: sublime-text
