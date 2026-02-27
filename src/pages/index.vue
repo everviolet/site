@@ -5,9 +5,10 @@
         <div class="description">
           <p class="title">a gentle, garden-grown color palette</p>
           <p class="subtitle">
-          The evergarden org is all about keeping Evergarden alive and spreading its cozy
-          vibes across different apps, editors, and tools. We’re here to make sure
-          you get a beautiful, consistent experience everywhere. ✨
+            The evergarden org is all about keeping Evergarden alive and
+            spreading its cozy vibes across different apps, editors, and tools.
+            We’re here to make sure you get a beautiful, consistent experience
+            everywhere. ✨
           </p>
           <div class="actions">
             <a class="button action-palette" href="/palette">Palette</a>
@@ -16,9 +17,6 @@
         </div>
         <div class="hero-image"></div>
       </div>
-    </div>
-    <div id="page">
-      <palette/>
     </div>
   </main>
 </template>
@@ -36,7 +34,7 @@ import palette from "@/components/palette.vue";
   justify-content: space-around;
   height: 732px;
 
-  >.container {
+  > .container {
     display: flex;
     flex-direction: row;
 
@@ -46,7 +44,7 @@ import palette from "@/components/palette.vue";
       flex-direction: column;
     }
 
-    >div{
+    > div {
       @include notmobile() {
         width: 50%;
       }

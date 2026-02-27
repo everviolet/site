@@ -1,0 +1,203 @@
+- name: Winter
+  colors:
+    - name: red
+      hex: '#f57f82'
+    - name: orange
+      hex: '#f7a182'
+    - name: yellow
+      hex: '#f5d098'
+    - name: lime
+      hex: '#dbe6af'
+    - name: green
+      hex: '#cbe3b3'
+    - name: aqua
+      hex: '#b3e3ca'
+    - name: skye
+      hex: '#b3e6db'
+    - name: snow
+      hex: '#afd9e6'
+    - name: blue
+      hex: '#b2caed'
+    - name: purple
+      hex: '#d2bdf3'
+    - name: pink
+      hex: '#f3c0e5'
+    - name: cherry
+      hex: '#fae6ef'
+    - name: text
+      hex: '#f8f9e8'
+    - name: subtext1
+      hex: '#adc9bc'
+    - name: subtext0
+      hex: '#96b4aa'
+    - name: overlay2
+      hex: '#839e9a'
+    - name: overlay1
+      hex: '#6f8788'
+    - name: overlay0
+      hex: '#58686d'
+    - name: surface2
+      hex: '#4a585c'
+    - name: surface1
+      hex: '#374145'
+    - name: surface0
+      hex: '#262f33'
+    - name: base
+      hex: '#1e2528'
+    - name: mantle
+      hex: '#191e21'
+    - name: crust
+      hex: '#171c1f'
+    
+- name: Fall
+  colors:
+    - name: red
+      hex: '#f57f82'
+    - name: orange
+      hex: '#f7a182'
+    - name: yellow
+      hex: '#f5d098'
+    - name: lime
+      hex: '#dbe6af'
+    - name: green
+      hex: '#cbe3b3'
+    - name: aqua
+      hex: '#b3e3ca'
+    - name: skye
+      hex: '#b3e6db'
+    - name: snow
+      hex: '#afd9e6'
+    - name: blue
+      hex: '#b2caed'
+    - name: purple
+      hex: '#d2bdf3'
+    - name: pink
+      hex: '#f3c0e5'
+    - name: cherry
+      hex: '#fae6ef'
+    - name: text
+      hex: '#f8f9e8'
+    - name: subtext1
+      hex: '#adc9bc'
+    - name: subtext0
+      hex: '#96b4aa'
+    - name: overlay2
+      hex: '#839e9a'
+    - name: overlay1
+      hex: '#6f8788'
+    - name: overlay0
+      hex: '#58686d'
+    - name: surface2
+      hex: '#4a585c'
+    - name: surface1
+      hex: '#374145'
+    - name: surface0
+      hex: '#2b3337'
+    - name: base
+      hex: '#232a2e'
+    - name: mantle
+      hex: '#1c2225'
+    - name: crust
+      hex: '#171c1f'
+    
+- name: Spring
+  colors:
+    - name: red
+      hex: '#f57f82'
+    - name: orange
+      hex: '#f7a182'
+    - name: yellow
+      hex: '#f5d098'
+    - name: lime
+      hex: '#dbe6af'
+    - name: green
+      hex: '#cbe3b3'
+    - name: aqua
+      hex: '#b3e3ca'
+    - name: skye
+      hex: '#b3e6db'
+    - name: snow
+      hex: '#afd9e6'
+    - name: blue
+      hex: '#b2caed'
+    - name: purple
+      hex: '#d2bdf3'
+    - name: pink
+      hex: '#f3c0e5'
+    - name: cherry
+      hex: '#fae6ef'
+    - name: text
+      hex: '#f8f9e8'
+    - name: subtext1
+      hex: '#adc9bc'
+    - name: subtext0
+      hex: '#96b4aa'
+    - name: overlay2
+      hex: '#839e9a'
+    - name: overlay1
+      hex: '#6f8788'
+    - name: overlay0
+      hex: '#58686d'
+    - name: surface2
+      hex: '#4a585c'
+    - name: surface1
+      hex: '#3e4a4f'
+    - name: surface0
+      hex: '#343e43'
+    - name: base
+      hex: '#2b3438'
+    - name: mantle
+      hex: '#1c2225'
+    - name: crust
+      hex: '#171c1f'
+    
+- name: Summer
+  colors:
+    - name: red
+      hex: '#b86466'
+    - name: orange
+      hex: '#b88067'
+    - name: yellow
+      hex: '#bd9c68'
+    - name: lime
+      hex: '#a0a673'
+    - name: green
+      hex: '#889f70'
+    - name: aqua
+      hex: '#71a088'
+    - name: skye
+      hex: '#6e9991'
+    - name: snow
+      hex: '#7497a2'
+    - name: blue
+      hex: '#789da8'
+    - name: purple
+      hex: '#9b87ad'
+    - name: pink
+      hex: '#b881a8'
+    - name: cherry
+      hex: '#c29fb2'
+    - name: text
+      hex: '#2b3034'
+    - name: subtext1
+      hex: '#455355'
+    - name: subtext0
+      hex: '#576869'
+    - name: overlay2
+      hex: '#707d76'
+    - name: overlay1
+      hex: '#829084'
+    - name: overlay0
+      hex: '#a3ab9b'
+    - name: surface2
+      hex: '#c2c6b3'
+    - name: surface1
+      hex: '#edead8'
+    - name: surface0
+      hex: '#f0ecdf'
+    - name: base
+      hex: '#f5f1eb'
+    - name: mantle
+      hex: '#f0eae4'
+    - name: crust
+      hex: '#e8e0d5'
