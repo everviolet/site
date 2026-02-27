@@ -12,5 +12,6 @@ mkShell {
 
   packages = [
     prettier
+    inputs.ebil.packages.${stdenv.hostPlatform.system}.default
   ];
 }
