@@ -1,7 +1,10 @@
 <template>
   <main>
     <div id="page">
-      <palette/>
+      <div id="palette">
+        <h2>Palette</h2>
+        <palette />
+      </div>
     </div>
   </main>
 </template>
@@ -15,6 +18,12 @@ main {
   height: 100%;
 
   #page {
+    #palette {
+      > h2 {
+        margin-bottom: 1rem;
+      }
+    }
+
     width: 80%;
     margin: 0 auto;
   }

@@ -6,9 +6,18 @@
       </h3>
       <div class="colorbox" :style="{ 'background-color': hex }"></div>
     </span>
-    <p>
-      {{ color.desc }}
-    </p>
+    <div class="desc">
+      <p v-if="!!color.desc">
+        {{ color.desc }}
+      </p>
+      <div class="syntax" v-if="!!color.syntax">
+        <template v-for="type in color.syntax">
+          <span :style="{ color: hex }">
+            {{ type }}
+          </span>
+        </template>
+      </div>
+    </div>
     <div class="overlay">
       <div class="variants">
         <div v-for="variant in palettes">
@@ -120,6 +129,27 @@ const { hex = "#000000" } = palettes[0].colors.find(
   .name {
     margin: spacing(8) 0;
     color: var(--theme-subtext0);
+  }
+  .desc {
+    display: grid;
+    grid-template-rows: 1fr;
+    font-weight: 700;
+
+    .syntax {
+      display: flex;
+      gap: 0.4rem;
+      align-self: center;
+
+      padding: 0.2rem;
+
+      > span {
+        background-color: var(--theme-surface0);
+        padding: 0.5rem 0.8rem;
+        border-radius: 6px;
+        font-family: monospace;
+        font-weight: 700;
+      }
+    }
   }
 }
 </style>

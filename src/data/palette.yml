@@ -1,49 +1,64 @@
 colors:
   - name: red
-    desc: meow
+    syntax:
+      - keywords
+      - errors
   - name: orange
-    desc: meow
+    syntax:
+      - builtins
   - name: yellow
-    desc: meow
+    syntax:
+      - types
+      - warnings
   - name: lime
-    desc: meow
+    syntax:
+      - strings
   - name: green
-    desc: meow
+    syntax:
+      - functions
+      - success
   - name: aqua
-    desc: meow
+    syntax:
+      - macros
   - name: skye
-    desc: meow
+    syntax:
+      - properties
+      - nodes
   - name: snow
-    desc: meow
+    syntax:
+      - modules
   - name: blue
-    desc: meow
+    syntax:
+      - url
   - name: purple
-    desc: meow
   - name: pink
-    desc: meow
+    syntax:
+      - constants
   - name: cherry
-    desc: meow
+    syntax:
+      - attributes
+      - annotations
   - name: text
-    desc: meow
+    desc: foreground text
   - name: subtext1
-    desc: meow
+    desc: additional information, selected items, special text areas.
   - name: subtext0
-    desc: meow
+    desc: low priority text
   - name: overlay2
-    desc: meow
+    desc: directories, high priority special text
   - name: overlay1
-    desc: meow
+    desc: non-current text, gutter text
   - name: overlay0
-    desc: meow
+    desc: non-text, borders
   - name: surface2
-    desc: meow
+    desc: linenr
   - name: surface1
-    desc: meow
+    desc: selected line, separator lines
   - name: surface0
-    desc: meow
+    desc: current line, rulers
   - name: base
-    desc: meow
+    desc: main bg color
   - name: mantle
-    desc: meow
+    desc: special bg color, drawers, sidebars
   - name: crust
-    desc: meow
+    desc: dark, for contrast on bright backgrounds

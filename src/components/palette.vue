@@ -1,11 +1,8 @@
 <template>
-  <div id="palette">
-    <h2>Palette</h2>
-    <div class="palette-colors">
-      <template v-for="color in palette.colors">
-        <swatch :color="color" />
-      </template>
-    </div>
+  <div class="palette-colors">
+    <template v-for="color in palette.colors">
+      <swatch :color="color" />
+    </template>
   </div>
 </template>
 
