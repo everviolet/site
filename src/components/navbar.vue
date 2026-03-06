@@ -1,12 +1,16 @@
 <template>
   <nav class="navbar">
-    <a class="navbar__head" href="/">
+    <RouterLink class="navbar__head" to="/">
       <img src="/evg-circle-pixel-small.svg" alt="evergarden" width="32" height="32"/>
       <p class="navbar__name">evergarden</p>
-    </a>
+    </RouterLink>
     <div class="navbar__links">
-      <div class="navbar__link"><a href="/palette">Palette</a></div>
-      <div class="navbar__link"><a href="/ports">Ports</a></div>
+      <div class="navbar__link">
+        <RouterLink to="/palette">Palette</RouterLink>
+      </div>
+      <div class="navbar__link">
+        <RouterLink to="/ports">Ports</RouterLink>
+      </div>
       <div class="navbar__link">
         <a href="https://codeberg.org/evergarden/.profile">Resources</a>
       </div>
@@ -132,7 +136,9 @@ onBeforeUnmount(() => {
 
   line-height: 2.2rem;
 
-  a {
+  a,
+  .router-link-active,
+  .router-link-exact-active {
     font-size: font-size(20);
     font-weight: font-weight(semibold);
     color: theme(text);
@@ -143,6 +149,11 @@ onBeforeUnmount(() => {
     &:hover {
       background-color: theme(surface0);
     }
+  }
+  
+  .router-link-exact-active {
+    text-decoration: underline theme(green) 2px;
+    text-underline-offset: 6px;
   }
 
   & + &:before {
