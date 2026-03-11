@@ -34,16 +34,17 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from "vue";
+
 import colorbox from "@/components/colorbox.vue";
 
 import palette from "@/data/palette.yml";
 import palettes from "@/data/palettes.yml";
 
-const { color } = defineProps(["color"]);
-
-const { hex = "#000000" } = palettes[0].colors.find(
-  (c) => c.name == color.name,
-);
+const { color, variant } = defineProps(["color", "variant"]);
+const hex = computed(() => palettes[variant].colors.find(
+  (c) => c.name == color.name
+).hex);
 </script>
 
 <style lang="scss">

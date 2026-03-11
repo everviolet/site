@@ -41,7 +41,7 @@ colors:
   - name: text
     desc: foreground text
   - name: subtext1
-    desc: additional information, selected items, special text areas.
+    desc: additional information, selected items, special text areas
   - name: subtext0
     desc: low priority text
   - name: overlay2

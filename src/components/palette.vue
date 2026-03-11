@@ -1,7 +1,7 @@
 <template>
   <div class="palette-colors">
     <template v-for="color in palette.colors">
-      <swatch :color="color" />
+      <swatch :color="color" :variant="variant" />
     </template>
   </div>
 </template>
@@ -9,6 +9,8 @@
 <script setup lang="ts">
 import palette from "@/data/palette.yml";
 import swatch from "@/components/swatch.vue";
+
+const { variant } = defineProps(["variant"]);
 </script>
 
 <style lang="scss">
