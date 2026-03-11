@@ -25,6 +25,8 @@
   desc: "General-purpose command-line fuzzy finder"
 - repo: ghostty
   desc: "Terminal emulator written in zig"
+- repo: gitea
+  desc: "Self-hosted lightweight software forge"
 - repo: helix
   desc: "A Kakoune / Neovim inspired editor"
 - repo: iterm
