@@ -4,7 +4,7 @@
       <div id="palette">
         <div class="header">
           <h2>Palette</h2>
-          <select v-model="selected" aria-label="select variant">
+          <select v-model="selected" aria-label="select variant" class="header-component">
             <option v-for="(v, i) in palettes" :value="i">{{ v.name }}</option>
           </select>
         </div>
@@ -34,28 +34,12 @@ main {
         justify-content: space-between;
         
         > select {
-          border: unset;
-          padding: 0.5rem;
           font: inherit;
-          border-radius: 6px;
           font-weight: 600;
-          appearance: base-select;
-          transition: background-color 100ms ease-in;
-          background-color: var(--theme-mantle);
-          &:hover {
-            background-color: var(--theme-surface0);
-          }
-        }
-
-        > h2,
-        > select {
-          margin-bottom: 1rem;
+          cursor: pointer;
         }
       }
     }
-
-    width: 80%;
-    margin: 0 auto;
   }
 }
 </style>

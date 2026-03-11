@@ -1,20 +1,11 @@
 <template>
-  <div class="header">
-    <h2>Ports</h2>
-    <div class="search-wrapper">
-      <input
-        class="form-control search"
-        type="text"
-        v-model="searchQuery"
-        placeholder="search"
-      />
-    </div>
-  </div>
   <ul id="ports">
     <li v-for="port in results" class="port">
       <a :href="`https://codeberg.org/evergarden/${port.repo}`">
         <h3>{{ port.name || port.repo }}</h3>
-        <em>{{ port.desc }}</em>
+        <p class="desc">
+          <em>{{ port.desc }}</em>
+        </p>
       </a>
     </li>
   </ul>
@@ -25,12 +16,11 @@ import { ref, computed } from "vue";
 
 import ports from "@/data/ports.yml";
 
-const searchQuery = ref("");
+const { query } = defineProps(["query"]);
 
 const results = computed(() =>
   ports.filter((item) =>
-    searchQuery.value
-      .toLowerCase()
+    query.toLowerCase()
       .split(" ")
       .every(
         (v) =>
@@ -45,40 +35,9 @@ const results = computed(() =>
 @use "@/styles/functions" as *;
 @use "@/styles/responsive" as *;
 
-.header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-
-  margin: spacing(8) 0 spacing(16);
-
-  .search-wrapper {
-    display: grid;
-  }
-
-  input {
-    width: 20rem;
-  }
-
-  @include onmobile() {
-    flex-direction: column-reverse;
-    align-items: start;
-    gap: spacing(16);
-
-    .search-wrapper {
-      width: 100%;
-    }
-    input {
-      justify-self: center;
-      width: min(100%, 32rem);
-    }
-  }
-}
-
 #ports {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: spacing(16);
 
   list-style-type: none;
@@ -107,7 +66,9 @@ const results = computed(() =>
       color: theme(subtext0);
     }
 
-    em {
+    .desc {
+      font-size: font-size(16);
+      line-height: 1.2;
       color: var(--theme-overlay1);
     }
 

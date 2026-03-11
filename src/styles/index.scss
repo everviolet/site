@@ -23,10 +23,6 @@ body {
   font-family: Menlo, Consolas, Monaco, Adwaita Mono, Liberation Mono, Lucida Console, monospace;
 }
 
-.serif, em {
-  font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-}
-
 a {
   text-decoration: none;
   color: theme(overlay1);
@@ -89,13 +85,32 @@ main {
   height: 100%;
 
   #page {
-    margin: 6rem 20% 2rem;
+    width: 80%;
+    margin: 0 auto 2rem;
 
-    @include ontablet() {
-      margin: 6rem 10% 2rem;
-    }
-    @include onmobile() {
-      margin: 6rem 5% 2rem;
+    .header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: spacing(8) 0 spacing(16);
+      height: 2rem;
+
+      .header-component {
+        border: 1px solid transparent;
+        border-radius: 6px;
+
+        font-size: font-size(16);
+
+        width: 10rem;
+        height: 100%;
+        padding: 0 1rem;
+        transition: background-color 100ms ease-in;
+        background-color: theme(mantle);
+        &:hover {
+          background-color: theme(crust);
+        }
+      }
     }
   }
 }
@@ -106,16 +121,4 @@ main {
 
 ::placeholder {
   color: theme(overlay1);
-}
-
-input.search[type=text] {
-  border: 1px solid transparent;
-  border-radius: 99em;
-
-  height: 2.4rem;
-  padding: 0 1rem;
-
-  font-size: font-size(16);
-
-  background-color: theme(mantle);
 }
