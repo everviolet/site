@@ -11,15 +11,6 @@
       <div class="navbar__link">
         <RouterLink to="/ports">Ports</RouterLink>
       </div>
-      <div class="navbar__link">
-        <a href="https://codeberg.org/evergarden/.profile">Resources</a>
-      </div>
-      <div class="navbar__link">
-        <a href="https://robinwobin.dev/redirect/discord">Community</a>
-      </div>
-      <div class="navbar__link">
-        <a href="https://codeberg.org/evergarden">Codeberg</a>
-      </div>
     </div>
   </nav>
 </template>

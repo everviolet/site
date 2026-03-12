@@ -15,7 +15,6 @@
             <a class="button accent action-ports" href="/ports">Ports</a>
           </div>
         </div>
-        <div class="hero-image"></div>
       </div>
     </div>
   </main>
@@ -32,7 +31,7 @@ import palette from "@/components/palette.vue";
 #hero {
   display: flex;
   justify-content: space-around;
-  height: 732px;
+  align-self: center;
 
   > .container {
     display: flex;
