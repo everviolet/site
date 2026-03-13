@@ -5,7 +5,9 @@
     :style="{
       'background-color': hex,
     }"
-  ></div>
+  >
+    <label>{{ hex }}</label>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -23,3 +25,29 @@ function copyhex(event) {
   writeClipboardText(event);
 }
 </script>
+
+<style lang="scss">
+@use "@/styles/functions" as *;
+@use "@/styles/responsive" as *;
+
+.colorbox {
+  height: spacing(24);
+  aspect-ratio: 1;
+  border: 1px solid theme(surface0);
+  border-radius: 6px;
+  padding: 0 1rem;
+
+  label {
+    font-size: font-size(12);
+    color: theme(crust);
+  }
+
+  &.copy {
+    position: relative;
+
+    &:hover {
+      border-color: theme(overlay0);
+    }
+  }
+}
+</style>

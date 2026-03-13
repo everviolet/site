@@ -123,21 +123,6 @@ const colorFor = (clr, v) => palette[v].colors.find(c => c.name == clr.name).hex
             margin-inline: auto;
           }
 
-          > .colorbox {
-            height: spacing(24);
-            aspect-ratio: 1;
-            border: 1px solid theme(surface0);
-            border-radius: 6px;
-
-            &.copy {
-              position: relative;
-
-              &:hover {
-                border-color: theme(overlay0);
-              }
-            }
-          }
-
           > span {
             text-transform: lowercase;
             color: theme(text);

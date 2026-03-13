@@ -43,5 +43,20 @@ const v = computed(() => palette[variant]);
   @include onmobile() {
     --skew: 0;
   }
+
+  /* summer */
+  .variants > :last-child .colorbox label {
+    color: theme(text);
+  }
+
+  .swatch:nth-last-child(-n + 6) {
+    .colorbox label {
+      color: theme(text);
+    }
+    /* summer */
+    .variants > :last-child .colorbox label {
+      color: theme(crust);
+    }
+  }
 }
 </style>
