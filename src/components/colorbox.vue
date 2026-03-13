@@ -6,12 +6,15 @@
       'background-color': hex,
     }"
   >
-    <label>{{ hex }}</label>
+    <label>{{ label }}</label>
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
+
 const { hex } = defineProps(["hex"]);
+const label = ref(hex);
 
 async function writeClipboardText(text) {
   try {
@@ -23,6 +26,11 @@ async function writeClipboardText(text) {
 
 function copyhex(event) {
   writeClipboardText(event);
+
+  label.value = "copied!";
+  setTimeout(() => {
+    label.value = hex;
+  }, 1000);
 }
 </script>
 
