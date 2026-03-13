@@ -11,9 +11,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from "vue";
 
-const { hex } = defineProps(["hex"]);
+const { hex, visible } = defineProps(["hex", "visible"]);
 const label = ref(hex);
 
 async function writeClipboardText(text) {
@@ -25,6 +25,8 @@ async function writeClipboardText(text) {
 }
 
 function copyhex(event) {
+  if (!visible) return;
+
   writeClipboardText(event);
 
   label.value = "copied!";

@@ -1,13 +1,17 @@
 <template>
   <div class="swatch">
     <div class="bg" :style="{ color: hex, 'background-color': hex }"></div>
-    <div class="overlay">
+    <div class="overlay" @transitionend="transitionend">
       <div class="variants">
         <div v-for="(v, i) in palette">
           <span>
             {{ v.name }}
           </span>
-          <colorbox :style="{ 'z-index': 5 }" :hex="colorFor(color, i)" />
+          <colorbox
+            :style="{ 'z-index': 5 }"
+            :hex="colorFor(color, i)"
+            :visible="visible"
+          />
         </div>
       </div>
     </div>
@@ -15,7 +19,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { ref, computed } from "vue";
 
 import palette from "@/data/palette.yml";
 import colorbox from "@/components/colorbox.vue";
@@ -24,6 +28,12 @@ const { color, variant } = defineProps(["color", "variant"]);
 const hex = computed(() => colorFor(color, variant));
 
 const colorFor = (clr, v) => palette[v].colors.find(c => c.name == clr.name).hex;
+
+const visible = ref(false);
+
+function transitionend(e: TransitionEvent) {
+  if (e.propertyName === "opacity") visible.value = !visible.value;
+}
 </script>
 
 <style lang="scss">
@@ -67,6 +77,11 @@ const colorFor = (clr, v) => palette[v].colors.find(c => c.name == clr.name).hex
     inset: 0;
   }
 
+  &:hover .overlay {
+    opacity: 1;
+    background-color: inherit;
+  }
+
   @include notmobile() {
     .bg {
       --before: skew(var(--skew)) scaleX(104%);
@@ -75,11 +90,6 @@ const colorFor = (clr, v) => palette[v].colors.find(c => c.name == clr.name).hex
 
       transform: skew(var(--skew)) scaleX(104%);
       animation: overlay-out 100ms forwards;
-    }
-
-    &:hover .overlay {
-      opacity: 1;
-      background-color: inherit;
     }
 
     &:hover .bg {
@@ -93,7 +103,9 @@ const colorFor = (clr, v) => palette[v].colors.find(c => c.name == clr.name).hex
     inset: 0;
     height: 100%;
 
-    left: -25%;
+    @include notmobile() {
+      left: -25%;
+    }
 
     opacity: 0;
     transition: opacity 100ms ease-out;
