@@ -2,10 +2,17 @@ default: build
 
 prefix := 'out'
 
+whiskers:
+  whiskers src/palette.tera
+  whiskers src/styles.tera
+  whiskers index.txt.tera -f winter
+
 dev:
+  @just whiskers
   pnpm run dev
 
 build:
+  @just whiskers
   pnpm run build
 
 install:
