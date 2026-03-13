@@ -1,0 +1,66 @@
+---
+whiskers:
+  version: ^2.0.0
+  filename: "src/styles/_variables.scss"
+---
+@mixin theme-variables($theme) {
+  --theme-red: var(--var-color-#{$theme}-red);
+  --theme-orange: var(--var-color-#{$theme}-orange);
+  --theme-yellow: var(--var-color-#{$theme}-yellow);
+  --theme-lime: var(--var-color-#{$theme}-lime);
+  --theme-green: var(--var-color-#{$theme}-green);
+  --theme-aqua: var(--var-color-#{$theme}-aqua);
+  --theme-skye: var(--var-color-#{$theme}-skye);
+  --theme-snow: var(--var-color-#{$theme}-snow);
+  --theme-blue: var(--var-color-#{$theme}-blue);
+  --theme-purple: var(--var-color-#{$theme}-purple);
+  --theme-pink: var(--var-color-#{$theme}-pink);
+  --theme-cherry: var(--var-color-#{$theme}-cherry);
+  --theme-text: var(--var-color-#{$theme}-text);
+  --theme-subtext1: var(--var-color-#{$theme}-subtext1);
+  --theme-subtext0: var(--var-color-#{$theme}-subtext0);
+  --theme-overlay2: var(--var-color-#{$theme}-overlay2);
+  --theme-overlay1: var(--var-color-#{$theme}-overlay1);
+  --theme-overlay0: var(--var-color-#{$theme}-ovarlay0);
+  --theme-surface2: var(--var-color-#{$theme}-surface2);
+  --theme-surface1: var(--var-color-#{$theme}-surface1);
+  --theme-surface0: var(--var-color-#{$theme}-surface0);
+  --theme-base: var(--var-color-#{$theme}-base);
+  --theme-mantle: var(--var-color-#{$theme}-mantle);
+  --theme-crust: var(--var-color-#{$theme}-crust);
+}
+
+:root {
+  {% for _, flavor in flavors -%}
+  /* {{flavor.name}} */
+  {% for _, color in flavor.colors -%}
+  --var-color-{{flavor.identifier}}-{{color.name}}: #{{color.hex}};
+  {% endfor %}
+  {% endfor -%}
+
+  @include theme-variables(summer);
+
+  @media (prefers-color-scheme: dark) {
+    @include theme-variables(fall);
+  }
+}
+
+html[data-theme="summer"] {
+  color-scheme: light;
+  @include theme-variables(summer);
+}
+
+html[data-theme="spring"] {
+  color-scheme: dark;
+  @include theme-variables(spring);
+}
+
+html[data-theme="fall"] {
+  color-scheme: dark;
+  @include theme-variables(fall);
+}
+
+html[data-theme="winter"] {
+  color-scheme: dark;
+  @include theme-variables(winter);
+}
