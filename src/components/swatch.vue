@@ -93,6 +93,8 @@ const colorFor = (clr, v) => palette[v].colors.find(c => c.name == clr.name).hex
     inset: 0;
     height: 100%;
 
+    left: -25%;
+
     opacity: 0;
     transition: opacity 100ms ease-out;
 
