@@ -13,6 +13,7 @@ install:
   cp -r dist/* {{prefix}}
 
 push:
+  @just build
   rsync -rltzv \
     --delete \
     --chmod=D755,F644 \
