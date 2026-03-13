@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const { hex } = defineProps(["hex"]);
 const label = ref(hex);
