@@ -1,32 +1,13 @@
 <template>
   <div class="swatch">
-    <span class="header">
-      <h3 class="name">
-        {{ color.name }}
-      </h3>
-      <div class="colorbox" :style="{ 'background-color': hex }"></div>
-    </span>
-    <div class="desc">
-      <p v-if="!!color.desc">
-        {{ color.desc }}
-      </p>
-      <div class="syntax" v-if="!!color.syntax">
-        <template v-for="type in color.syntax">
-          <span :style="{ color: hex }">
-            {{ type }}
-          </span>
-        </template>
-      </div>
-    </div>
+    <div class="bg" :style="{ color: hex, 'background-color': hex }"></div>
     <div class="overlay">
       <div class="variants">
-        <div v-for="variant in palettes">
-          <colorbox
-            :hex="variant.colors.find((c) => c.name == color.name).hex"
-          />
+        <div v-for="(v, i) in palette">
           <span>
-            {{ variant.name }}
+            {{ v.name }}
           </span>
+          <colorbox :style="{ 'z-index': 5 }" :hex="colorFor(color, i)" />
         </div>
       </div>
     </div>
@@ -36,37 +17,81 @@
 <script setup lang="ts">
 import { computed } from "vue";
 
+import palette from "@/data/palette.yml";
 import colorbox from "@/components/colorbox.vue";
 
-import palette from "@/data/palette.yml";
-import palettes from "@/data/palettes.yml";
-
 const { color, variant } = defineProps(["color", "variant"]);
-const hex = computed(() => palettes[variant].colors.find(
-  (c) => c.name == color.name
-).hex);
+const hex = computed(() => colorFor(color, variant));
+
+const colorFor = (clr, v) => palette[v].colors.find(c => c.name == clr.name).hex;
 </script>
 
 <style lang="scss">
 @use "@/styles/functions" as *;
 @use "@/styles/responsive" as *;
 
+@keyframes overlay {
+  from {
+    translate: var(--before);
+    z-index: initial;
+  }
+
+  to {
+    transform: var(--after);
+    z-index: var(--new-z-index);
+  }
+}
+@keyframes overlay-out {
+  from {
+    transform: var(--after);
+    z-index: var(--new-z-index);
+  }
+
+  99% {
+    z-index: var(--new-z-index);
+  }
+  to {
+    translate: var(--before);
+    z-index: initial;
+  }
+}
+
 .swatch {
-  display: grid;
-  grid-template-rows: 1fr auto;
-
-  background-color: var(--theme-mantle);
-
-  border-radius: 6px;
-  padding: spacing(12);
-
   position: relative;
-  overflow: hidden;
+
+  height: 100%;
+  width: 100%;
+
+  .bg {
+    position: absolute;
+    inset: 0;
+  }
+
+  @include notmobile() {
+    .bg {
+      --before: skew(var(--skew)) scaleX(104%);
+      --after: skew(var(--skew)) scaleX(200%);
+      --new-z-index: 3;
+
+      transform: skew(var(--skew)) scaleX(104%);
+      animation: overlay-out 100ms forwards;
+    }
+
+    &:hover .overlay {
+      opacity: 1;
+      background-color: inherit;
+    }
+
+    &:hover .bg {
+      animation: overlay 150ms forwards;
+    }
+  }
 
   .overlay {
     position: absolute;
-    z-index: 2;
+    z-index: 100;
     inset: 0;
+    height: 100%;
 
     opacity: 0;
     transition: opacity 100ms ease-out;
@@ -76,10 +101,16 @@ const hex = computed(() => palettes[variant].colors.find(
 
       .variants {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
         align-self: center;
         margin-inline: auto;
         padding: spacing(4);
+        gap: spacing(6);
+
+        @include onmobile() {
+          grid-template-rows: unset;
+          grid-template-columns: repeat(4, 1fr);
+        }
 
         > div {
           display: grid;
@@ -92,63 +123,26 @@ const hex = computed(() => palettes[variant].colors.find(
 
           > .colorbox {
             height: spacing(24);
+            aspect-ratio: 1;
+            border: 1px solid theme(surface0);
+            border-radius: 6px;
 
             &.copy {
-              cursor: pointer;
+              position: relative;
+
+              &:hover {
+                border-color: theme(overlay0);
+              }
             }
           }
 
           > span {
-            font-size: 0.8rem;
             text-transform: lowercase;
-            color: var(--theme-subtext0);
+            color: theme(text);
+            background-color: theme(mantle);
+            padding: 0 1rem;
           }
         }
-      }
-    }
-  }
-  &:hover .overlay {
-    opacity: 1;
-    background-color: inherit;
-  }
-
-  .colorbox {
-    height: spacing(36);
-    aspect-ratio: 1;
-    border-radius: spacing(16);
-    outline: 1px solid var(--theme-surface0);
-
-    @include notdesktop() {
-      height: spacing(24);
-    }
-  }
-  .header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  .name {
-    margin: spacing(8) 0;
-    color: var(--theme-subtext0);
-  }
-  .desc {
-    display: grid;
-    grid-template-rows: 1fr;
-    font-weight: 700;
-
-    .syntax {
-      display: flex;
-      gap: 0.4rem;
-      align-self: center;
-
-      padding: 0.2rem;
-
-      > span {
-        background-color: var(--theme-surface0);
-        padding: 0.5rem 0.8rem;
-        border-radius: 6px;
-        font-family: monospace;
-        font-weight: 700;
       }
     }
   }

@@ -1,12 +1,16 @@
 <template>
-  <ul id="ports">
+  <ul role="list" class="ports">
     <li v-for="port in results" class="port">
-      <a :href="`https://codeberg.org/evergarden/${port.repo}`">
-        <h3>{{ port.name || port.repo }}</h3>
+      <span>
+        <h3>
+          <a :href="`https://codeberg.org/evergarden/${port.repo}`">
+            {{ port.name || port.repo }}
+          </a>
+        </h3>
         <p class="desc">
-          <em>{{ port.desc }}</em>
+          {{ port.desc }}
         </p>
-      </a>
+      </span>
     </li>
   </ul>
 </template>
@@ -16,14 +20,15 @@ import { ref, computed } from "vue";
 
 import ports from "@/data/ports.yml";
 
-const { query } = defineProps(["query"]);
+const query = ref("");
 
 const results = computed(() =>
-  ports.filter((item) =>
-    query.toLowerCase()
+  ports.filter(item =>
+    query.value
+      .toLowerCase()
       .split(" ")
       .every(
-        (v) =>
+        v =>
           item.repo.toLowerCase().includes(v) ||
           (item.name && item.name.toLowerCase().includes(v)),
       ),
@@ -31,49 +36,32 @@ const results = computed(() =>
 );
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 @use "@/styles/functions" as *;
 @use "@/styles/responsive" as *;
 
-#ports {
+ul[role="list"].ports {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: spacing(16);
+  grid-template-columns: repeat(3, 1fr);
 
-  list-style-type: none;
-  padding: 0;
+  gap: 1rem;
+  margin: 1rem 0 2rem;
 
-  .port {
-    a {
-      display: grid;
-      grid-template-rows: 1fr 1fr;
+  @include onmobile() {
+    grid-template-columns: 1fr;
+  }
 
-      height: 8rem;
-      padding: spacing(16);
-    }
+  li.port {
+    padding: 0.2rem 0.5rem;
 
-    background-color: theme(mantle);
+    span {
+      h3 {
+        margin: 0.2rem 0rem 0.4rem;
+      }
 
-    border-radius: 4px;
-
-    font-size: font-size(22);
-
-    transition: background-color 300ms ease-in-out;
-
-    h3 {
-      margin: 0 0 spacing(16);
-
-      color: theme(subtext0);
-    }
-
-    .desc {
-      font-size: font-size(16);
-      line-height: 1.2;
-      color: var(--theme-overlay1);
-    }
-
-    &:hover {
-      background-color: theme(surface0);
+      .desc {
+        color: theme(subtext0);
+      }
     }
   }
 }

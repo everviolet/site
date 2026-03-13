@@ -2,9 +2,7 @@
   "nodes": {
     "ebil": {
       "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
+        "nixpkgs": ["nixpkgs"]
       },
       "locked": {
         "lastModified": 1771533741,

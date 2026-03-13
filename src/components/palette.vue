@@ -1,36 +1,47 @@
 <template>
   <div class="palette-colors">
-    <template v-for="color in palette.colors">
+    <template v-for="color in v.colors">
       <swatch :color="color" :variant="variant" />
     </template>
   </div>
 </template>
 
 <script setup lang="ts">
-import palette from "@/data/palette.yml";
+import { computed } from "vue";
 import swatch from "@/components/swatch.vue";
+import palette from "@/data/palette.yml";
 
 const { variant } = defineProps(["variant"]);
+
+const v = computed(() => palette[variant]);
 </script>
 
 <style lang="scss">
 @use "@/styles/functions" as *;
 @use "@/styles/responsive" as *;
 
-h3 {
-  margin: spacing(16) 0;
-
-  text-transform: capitalize;
-  color: var(--theme-subtext0);
-}
-
 .palette-colors {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: spacing(8);
+  width: 100%;
+  margin: 0 0 5rem;
 
-  @include notdesktop() {
-    grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(24, 1fr);
+
+  isolation: isolate;
+
+  --skew: -15deg;
+
+  @include onmobile() {
+    grid-template-columns: unset;
+    grid-template-rows: repeat(24, 6rem);
+  }
+
+  @include notmobile() {
+    height: 40vh;
+  }
+
+  @include onmobile() {
+    --skew: 0;
   }
 }
 </style>

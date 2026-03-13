@@ -6,115 +6,44 @@
 
 html {
   color-scheme: dark light;
+  font-size: 16px;
+}
+
+html,
+body {
+  min-height: 100vh;
 }
 
 body {
   background-color: var(--theme-base);
   color: var(--theme-text);
-  min-height: 100vh;
-  width: 100%;
-}
-
-.sans-serif, body {
-  font-family: "Nunito", -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Adwaita Sans, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
-}
-
-.mono, code {
-  font-family: Menlo, Consolas, Monaco, Adwaita Mono, Liberation Mono, Lucida Console, monospace;
+  font-family: "Maple Mono", monospace;
 }
 
 a {
+  color: inherit;
   text-decoration: none;
-  color: theme(overlay1);
-  border-radius: 4px;
+  text-decoration-inset: 0.5rem;
   cursor: pointer;
-}
 
-.button {
-  display: inline-block;
-
-  color: theme(subtext0);
-  background-color: theme(surface0);
-  transition: background-color 200ms ease-in-out;
-
-  margin: 0 spacing(4);
-  border-radius: 99em;
-  padding: 0 spacing(32);
-  width: fit-content;
-  height: 3rem;
-  line-height: calc(3rem - spacing(32) / 2 / 2);
-  font-size: font-size(20);
-
-  text-decoration: none;
-  cursor: pointer;
+  color: theme(blue);
 
   &:hover {
-    color: theme(subtext1);
-    background-color: theme(surface1);
+    text-decoration: underline wavy;
   }
 
-  &.accent {
-    color: theme(crust);
-    background-color: theme(skye);
-
-    &:hover {
-      background-color: color-mix(in oklch, theme(skye), theme(base) 10%);
-    }
+  &::before,
+  &::after {
+    color: theme(overlay2);
+    text-decoration: none !important;
   }
-}
 
-p {
-  line-height: 1.5;
-
-  a {
-    padding: 0 spacing(8);
-    background-color: theme(surface0);
-    transition: background-color 200s ease-in-out;
-
-    &:hover {
-      background-color: theme(surface1);
-    }
+  &::before {
+    content: "[";
   }
-}
 
-#app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  display: flex;
-  flex: 1;
-
-  #page {
-    width: 80%;
-    margin: 0 auto;
-
-    .header {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      margin: spacing(8) 0 spacing(16);
-      height: 2rem;
-
-      .header-component {
-        border: 1px solid transparent;
-        border-radius: 6px;
-
-        font-size: font-size(16);
-
-        width: 10rem;
-        height: 100%;
-        padding: 0 1rem;
-        transition: background-color 100ms ease-in;
-        background-color: theme(mantle);
-        &:hover {
-          background-color: theme(crust);
-        }
-      }
-    }
+  &::after {
+    content: "]";
   }
 }
 
@@ -124,4 +53,8 @@ main {
 
 ::placeholder {
   color: theme(overlay1);
+}
+
+main {
+  display: grid;
 }

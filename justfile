@@ -13,7 +13,12 @@ install:
   cp -r dist/* {{prefix}}
 
 push:
-  ebil push dist
+  rsync -rltzv \
+    --delete \
+    --chmod=D755,F644 \
+    --exclude userstyles \
+    --exclude gitea \
+    dist/ evergarden.ebil.club:.
 
 format:
   pnpm run format

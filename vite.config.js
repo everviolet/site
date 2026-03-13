@@ -1,10 +1,10 @@
 import { defineConfig } from "vite";
 import "dotenv/config";
 import vue from "@vitejs/plugin-vue";
-import content from '@originjs/vite-plugin-content'
-import { fileURLToPath } from 'node:url';
-import pages from 'vite-plugin-pages'
-import 'vite-ssg'
+import content from "@originjs/vite-plugin-content";
+import { fileURLToPath } from "node:url";
+import pages from "vite-plugin-pages";
+import "vite-ssg";
 
 export default defineConfig({
   server: {
@@ -20,12 +20,5 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
-  plugins: [
-    vue(),
-    pages(),
-    content(),
-  ],
-  ssgOptions: {
-    includeAllRoutes: true,
-  },
+  plugins: [vue(), pages(), content()],
 });
