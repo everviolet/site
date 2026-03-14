@@ -7,6 +7,10 @@
       url = "git+https://codeberg.org/comfysage/ebil.git";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    whiskers = {
+      url = "github:everviolet/whiskers";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

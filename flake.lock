@@ -37,7 +37,28 @@
     "root": {
       "inputs": {
         "ebil": "ebil",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "whiskers": "whiskers"
+      }
+    },
+    "whiskers": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1773418203,
+        "narHash": "sha256-hQ9JqgkRPTYybdC65v1/1OMc8+7N/u9LaAcxL9uQ3fU=",
+        "owner": "everviolet",
+        "repo": "whiskers",
+        "rev": "073c5a6504a6aa9814ee33247b2dc6c81b722264",
+        "type": "github"
+      },
+      "original": {
+        "owner": "everviolet",
+        "repo": "whiskers",
+        "type": "github"
       }
     }
   },

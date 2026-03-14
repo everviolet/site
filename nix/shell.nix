@@ -13,5 +13,6 @@ mkShell {
   packages = [
     prettier
     inputs.ebil.packages.${stdenv.hostPlatform.system}.default
+    inputs.whiskers.packages.${stdenv.hostPlatform.system}.default
   ];
 }
