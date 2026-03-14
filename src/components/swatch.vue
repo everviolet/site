@@ -67,6 +67,11 @@ const colorFor = (clr, v) => palette[v].colors.find(c => c.name == clr.name).hex
     inset: 0;
   }
 
+  &:hover .overlay {
+    opacity: 1;
+    background-color: inherit;
+  }
+
   @include notmobile() {
     .bg {
       --before: skew(var(--skew)) scaleX(104%);
@@ -75,11 +80,6 @@ const colorFor = (clr, v) => palette[v].colors.find(c => c.name == clr.name).hex
 
       transform: skew(var(--skew)) scaleX(104%);
       animation: overlay-out 100ms forwards;
-    }
-
-    &:hover .overlay {
-      opacity: 1;
-      background-color: inherit;
     }
 
     &:hover .bg {
@@ -93,7 +93,9 @@ const colorFor = (clr, v) => palette[v].colors.find(c => c.name == clr.name).hex
     inset: 0;
     height: 100%;
 
-    left: -25%;
+    @include notmobile() {
+      left: -25%;
+    }
 
     opacity: 0;
     transition: opacity 100ms ease-out;
