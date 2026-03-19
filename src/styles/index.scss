@@ -24,6 +24,7 @@ a {
   color: inherit;
   text-decoration: none;
   text-decoration-inset: 0.5rem;
+  font-style: italic;
   cursor: pointer;
 
   color: theme(blue);
@@ -34,6 +35,7 @@ a {
 
   &::before,
   &::after {
+    font-style: initial;
     color: theme(overlay2);
     text-decoration: none !important;
   }
