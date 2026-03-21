@@ -21,7 +21,7 @@
   desc: "Lightweight notification daemon"
 - repo: foot
   desc: "Minimalistic Wayland terminal emulator"
-- repo: FZF
+- repo: fzf
   desc: "General-purpose command-line fuzzy finder"
 - repo: ghostty
   desc: "Terminal emulator written in zig"
@@ -34,7 +34,6 @@
 - repo: jellyfin
   desc: "Free software media system"
 - repo: jellyfin-tui
-  name: jellyfin TUI
   desc: "Modern music streaming client for the terminal"
 - repo: kitty
   desc: "Fast and feature-rich terminal emulator"
