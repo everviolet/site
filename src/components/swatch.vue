@@ -2,6 +2,7 @@
   <div class="swatch">
     <div class="bg" :style="{ color: hex, 'background-color': hex }"></div>
     <div class="overlay">
+      <span>{{color.name}}</span>
       <div class="variants">
         <div v-for="(v, i) in palette">
           <span>
@@ -102,14 +103,23 @@ const colorFor = (clr, v) => palette[v].colors.find(c => c.name == clr.name).hex
 
     & {
       display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      > span {
+        color: theme(text);
+        background-color: theme(mantle);
+        margin: 0 0 0.5rem;
+        padding: 0 1rem;
+      }
 
       .variants {
-        display: grid;
-        grid-template-rows: repeat(4, 1fr);
-        align-self: center;
-        margin-inline: auto;
-        padding: spacing(4);
+        display: flex;
+        flex-direction: column;
         gap: spacing(6);
+        width: 100%;
 
         @include onmobile() {
           grid-template-rows: unset;
@@ -117,13 +127,11 @@ const colorFor = (clr, v) => palette[v].colors.find(c => c.name == clr.name).hex
         }
 
         > div {
-          display: grid;
-          grid-template-rows: 1fr auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
           gap: spacing(6);
-
-          > * {
-            margin-inline: auto;
-          }
+          width: 100%;
 
           > span {
             text-transform: lowercase;
