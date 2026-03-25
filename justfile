@@ -24,9 +24,7 @@ push:
   rsync -rltzv \
     --delete \
     --chmod=D755,F644 \
-    --exclude userstyles \
-    --exclude gitea \
-    dist/ evergarden.ebil.club:.
+    dist/ evergarden.ebil.club:root
 
 format:
   pnpm run format
