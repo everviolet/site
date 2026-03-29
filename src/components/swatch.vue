@@ -94,10 +94,6 @@ const colorFor = (clr, v) => palette[v].colors.find(c => c.name == clr.name).hex
     inset: 0;
     height: 100%;
 
-    @include notmobile() {
-      left: -25%;
-    }
-
     opacity: 0;
     transition: opacity 100ms ease-out;
 
@@ -122,8 +118,7 @@ const colorFor = (clr, v) => palette[v].colors.find(c => c.name == clr.name).hex
         width: 100%;
 
         @include onmobile() {
-          grid-template-rows: unset;
-          grid-template-columns: repeat(4, 1fr);
+          flex-direction: row;
         }
 
         > div {
