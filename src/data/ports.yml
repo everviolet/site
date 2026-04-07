@@ -39,6 +39,8 @@
   desc: "Fast and feature-rich terminal emulator"
 - repo: lazygit
   desc: "Simple terminal UI for git commands"
+- repo: mixplorer
+  desc: "An Android file explorer"
 - repo: nix
   desc: "Collection of Nix modules"
 - repo: qutebrowser
