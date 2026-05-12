@@ -9,6 +9,10 @@
         look at - whether you're coding, writing, or just staring at your terminal for fun
         (we won't judge).
       </p>
+      <p>
+        by the way, you can try out the colors in your terminal by running:
+      </p>
+      <pre><code>&#36; curl -L evergarden.moe</code></pre>
     </header>
     <palette :variant="initialVariant" />
   </main>
@@ -94,6 +98,18 @@ main {
       @include onmobile() {
         font-size: font-size(16);
         margin: 2rem 0 0;
+      }
+    }
+
+    pre:has(code) {
+      background-color: theme(mantle);
+      padding: 0.5rem;
+      margin: 1rem 0 0 0;
+      overflow-x: auto;
+
+      font-size: font-size(20);
+      @include onmobile() {
+        font-size: font-size(16);
       }
     }
   }
