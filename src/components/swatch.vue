@@ -76,7 +76,7 @@ const colorFor = (clr, v) => palette[v].colors.find(c => c.name == clr.name).hex
   @include notmobile() {
     .bg {
       --before: skew(var(--skew)) scaleX(104%);
-      --after: skew(var(--skew)) scaleX(200%);
+      --after: skew(var(--skew)) scaleX(250%);
       --new-z-index: 3;
 
       transform: skew(var(--skew)) scaleX(104%);
