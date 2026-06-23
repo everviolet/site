@@ -27,6 +27,8 @@
   desc: "Terminal emulator written in zig"
 - repo: gitea
   desc: "Self-hosted lightweight software forge"
+- repo: halloy
+  desc: "Simple and fast IRC client"
 - repo: helix
   desc: "A Kakoune / Neovim inspired editor"
 - repo: iterm
